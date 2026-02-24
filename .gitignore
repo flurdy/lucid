@@ -2,3 +2,6 @@
 public/
 resources/
 .hugo_build.lock
+
+# Beads issue tracking (synced via beads-sync branch)
+.beads/issues.jsonl
