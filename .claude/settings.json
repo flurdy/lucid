@@ -8,7 +8,8 @@
       "Bash(bd show:*)",
       "Bash(docker search:*)",
       "Bash(docker image ls)",
-      "Bash(gh repo view:*)"
+      "Bash(gh repo view:*)",
+      "Bash(curl:*)"
     ],
     "deny": [
       "Bash(git add -A)"
