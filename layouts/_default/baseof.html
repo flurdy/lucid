@@ -8,11 +8,23 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
 </head>
 <body>
+  <header class="container">
+    <nav>
+      <ul>
+        <li><a href="{{ "/" | relURL }}"><strong>{{ .Site.Title }}</strong></a></li>
+      </ul>
+      <ul>
+        {{ range .Site.Sections }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+  </header>
   <main class="container">
     {{ block "main" . }}{{ end }}
   </main>
   <footer class="container">
-    <small>&copy; {{ now.Year }} {{ .Site.Params.author }}</small>
+    <small>&copy; {{ now.Year }} {{ .Site.Params.author }} · <a href="https://code.flurdy.com">code.flurdy.com</a></small>
   </footer>
 </body>
 </html>

@@ -1,4 +1,12 @@
 {{ define "main" }}
+{{ if .Parent.IsHome }}
+<nav aria-label="breadcrumb">
+  <ul>
+    <li><a href="{{ "/" | relURL }}">Home</a></li>
+    <li>{{ .Title }}</li>
+  </ul>
+</nav>
+{{ end }}
 <h1>{{ .Title }}</h1>
 {{ .Content }}
 <ul>
