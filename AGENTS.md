@@ -29,7 +29,6 @@ Load and follow `docs/version-control.md` — it defines branching, staging, and
 ### Environment
 
 - **OS**: Fedora Linux
-- **Shell**: Fish Shell
 - **Editor**: VS Code
 
 ### Running the Site
@@ -64,6 +63,13 @@ description: "Brief description"
 
 1. Create `content/<appname>/` with `_index.md`, `privacy.md`, `terms.md`, `support.md`
 2. Hugo picks it up automatically
+
+## Deployment
+
+- **Cloudflare Pages** — configured in dashboard, no wrangler.toml
+- Build command: `hugo`, output: `public`, env: `HUGO_VERSION`
+- Auto-deploys on push to `main` from `flurdy/lucid`
+- **Do not push to main without user approval** — triggers production deploy
 
 ### Command Conventions
 

@@ -47,6 +47,11 @@ lucid/
 - ~~Set up Docker environment~~ — Dockerfile (`hugomods/hugo:exts`) and docker-compose.yml created
 - ~~Initialize git repo~~ — with .gitignore, AGENTS.md, CLAUDE.md, docs/
 - ~~Set up beads issue tracking~~ — with custom PRIME.md (no auto-push)
+- ~~Scaffold Hugo project~~ — hugo.toml, directory structure created
+- ~~Create minimal layouts~~ — baseof.html, single.html, list.html, index.html with Pico.css
+- ~~Create TapIn content pages~~ — privacy.md, terms.md, support.md with front matter
+- ~~Create private GitHub repo~~ — flurdy/lucid on GitHub, main pushed with upstream tracking
+- ~~Add Cloudflare Pages configuration~~ — build settings documented below (configured in dashboard, no wrangler.toml)
 
 ## Steps
 
@@ -66,11 +71,12 @@ lucid/
 - **support.md**: Support/contact page with email contact info
 - Each page has Hugo front matter: `title`, `date`, `lastmod`, `description`
 
-### 4. Add Cloudflare Pages configuration
-- The Cloudflare Pages build settings will be:
-  - Build command: `hugo`
-  - Build output directory: `public`
-  - Environment variable: `HUGO_VERSION` = latest stable
+### 4. Cloudflare Pages configuration
+- Configured in Cloudflare dashboard (no wrangler.toml needed)
+- Build command: `hugo`
+- Build output directory: `public`
+- Environment variable: `HUGO_VERSION` = latest stable
+- Connected to GitHub repo `flurdy/lucid`, deploys on push to `main`
 
 ### 5. Test locally with Docker
 - Run `docker compose up` and verify all pages render at http://localhost:1313
