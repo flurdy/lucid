@@ -42,14 +42,17 @@ lucid/
 └── README.md
 ```
 
+## Completed
+
+- ~~Set up Docker environment~~ — Dockerfile (`hugomods/hugo:exts`) and docker-compose.yml created
+- ~~Initialize git repo~~ — with .gitignore, AGENTS.md, CLAUDE.md, docs/
+- ~~Set up beads issue tracking~~ — with custom PRIME.md (no auto-push)
+
 ## Steps
 
-### 1. Set up Docker environment and scaffold project
-- Create `Dockerfile` using `hugomods/hugo:exts` image (extended edition + Dart Sass)
-- Create `docker-compose.yml` mounting project to `/src`, exposing port 1313
-- Scaffold Hugo project structure manually (hugo.toml, content/, layouts/, static/)
-- Initialize git repo
-- Configure `hugo.toml` with base URL `https://apps.flurdy.io`, title, and params
+### 1. Scaffold Hugo project
+- Create `hugo.toml` with base URL `https://apps.flurdy.io`, title, and params
+- Create directory structure: `content/tapin/`, `layouts/_default/`, `static/images/`
 
 ### 2. Create minimal layouts (no external theme)
 - **baseof.html**: Clean HTML5 skeleton with a `<link>` to a classless CSS framework (Pico.css via CDN) for instant styling with zero custom CSS
@@ -72,6 +75,11 @@ lucid/
 ### 5. Test locally with Docker
 - Run `docker compose up` and verify all pages render at http://localhost:1313
 - Verify URL structure: `/tapin/privacy/`, `/tapin/terms/`, `/tapin/support/`
+
+### 6. Create private GitHub repo
+- Create private repo `flurdy/lucid` on GitHub
+- Add remote origin and push main branch
+- Set up upstream tracking
 
 ## Adding a New App Later
 
