@@ -7,3 +7,5 @@ icon: "/images/tapin-icon.png"
 ---
 
 Welcome to the TapIn support pages. Please find our policies and support information below.
+
+[TapIn on DreamFactor](https://code.flurdy.com/project/TapIn)
