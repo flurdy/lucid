@@ -1,15 +1,19 @@
 {{ define "main" }}
 <h1>{{ .Site.Title }}</h1>
-<p>{{ .Site.Params.description }}</p>
-<div class="grid">
+<p class="lead text-body-secondary">{{ .Site.Params.description }}</p>
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-2">
   {{ range .Site.Sections }}
-  <article>
-    {{ with .Params.icon }}
-    <a href="{{ $.RelPermalink }}"><img src="{{ . }}" alt="{{ $.Title }} icon" style="width: 64px; height: 64px; border-radius: 14px;"></a>
-    {{ end }}
-    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-    <p>{{ .Description }}</p>
-  </article>
+  <div class="col">
+    <div class="card h-100">
+      <div class="card-body">
+        {{ with .Params.icon }}
+        <a href="{{ $.RelPermalink }}"><img src="{{ . }}" alt="{{ $.Title }} icon" class="rounded-3 mb-3" style="width: 64px; height: 64px;"></a>
+        {{ end }}
+        <h5 class="card-title"><a href="{{ .RelPermalink }}" class="text-decoration-none">{{ .Title }}</a></h5>
+        <p class="card-text text-body-secondary">{{ .Description }}</p>
+      </div>
+    </div>
+  </div>
   {{ end }}
 </div>
 {{ end }}

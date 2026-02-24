@@ -1,16 +1,14 @@
 {{ define "main" }}
 <nav aria-label="breadcrumb">
-  <ul>
-    <li><a href="{{ "/" | relURL }}">Home</a></li>
-    {{ with .Parent }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
-    <li>{{ .Title }}</li>
-  </ul>
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{{ "/" | relURL }}">Home</a></li>
+    {{ with .Parent }}<li class="breadcrumb-item"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
+    <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+  </ol>
 </nav>
 <article>
-  <header>
-    <h1>{{ .Title }}</h1>
-    {{ with .Params.lastmod }}<p><small><em>Last updated: {{ . | time.Format "2 January 2006" }}</em></small></p>{{ end }}
-  </header>
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.lastmod }}<p><small class="text-body-secondary"><em>Last updated: {{ . | time.Format "2 January 2006" }}</em></small></p>{{ end }}
   {{ .Content }}
 </article>
 {{ end }}

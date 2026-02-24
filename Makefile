@@ -10,7 +10,7 @@ build: ## Build site to public/
 	docker compose run --rm hugo hugo
 
 clean: ## Remove generated public/ directory
-	rm -rf public/
+	docker compose run --rm hugo rm -rf public/
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  %-10s %s\n", $$1, $$2}'

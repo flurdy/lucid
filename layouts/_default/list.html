@@ -1,20 +1,22 @@
 {{ define "main" }}
 {{ if .Parent.IsHome }}
 <nav aria-label="breadcrumb">
-  <ul>
-    <li><a href="{{ "/" | relURL }}">Home</a></li>
-    <li>{{ .Title }}</li>
-  </ul>
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{{ "/" | relURL }}">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+  </ol>
 </nav>
 {{ end }}
-{{ with .Params.icon }}
-<img src="{{ . }}" alt="{{ $.Title }} icon" style="width: 96px; height: 96px; border-radius: 20px;">
-{{ end }}
-<h1>{{ .Title }}</h1>
-{{ .Content }}
-<ul>
-  {{ range .Pages }}
-  <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+<div class="d-flex align-items-center gap-3 mb-3">
+  {{ with .Params.icon }}
+  <img src="{{ . }}" alt="{{ $.Title }} icon" class="rounded-3" style="width: 96px; height: 96px;">
   {{ end }}
-</ul>
+  <h1 class="mb-0">{{ .Title }}</h1>
+</div>
+{{ .Content }}
+<div class="list-group">
+  {{ range .Pages }}
+  <a href="{{ .RelPermalink }}" class="list-group-item list-group-item-action">{{ .Title }}</a>
+  {{ end }}
+</div>
 {{ end }}
