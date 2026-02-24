@@ -5,8 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ .Title }} — {{ .Site.Title }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  {{- $section := .CurrentSection }}
+  {{- $icon := "" }}
+  {{- with .Params.icon }}{{ $icon = . }}{{ end }}
+  {{- if not $icon }}{{ with $section }}{{ with .Params.icon }}{{ $icon = . }}{{ end }}{{ end }}{{ end }}
+  {{- with $icon }}
+  <link rel="icon" href="{{ . }}" type="image/png">
+  <link rel="apple-touch-icon" href="{{ . }}">
+  {{- else }}
   <link rel="icon" href="{{ "favicon.ico" | relURL }}">
   <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
+  {{- end }}
   <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/flatly/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <style>[data-bs-theme="dark"] .flurdy-logo { filter: invert(1); }</style>
