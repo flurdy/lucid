@@ -1,0 +1,7 @@
+{{ define "main" }}
+<article>
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.lastmod }}<p><small>Last updated: {{ . | time.Format "2 January 2006" }}</small></p>{{ end }}
+  {{ .Content }}
+</article>
+{{ end }}
