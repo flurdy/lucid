@@ -6,9 +6,11 @@
     <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
   </ol>
 </nav>
-<article>
-  <h1>{{ .Title }}</h1>
-  {{ with .Params.lastmod }}<p><small class="text-body-secondary"><em>Last updated: {{ . | time.Format "2 January 2006" }}</em></small></p>{{ end }}
-  {{ .Content }}
+<article class="card shadow-sm">
+  <div class="card-body p-4">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.lastmod }}<p><small class="text-body-secondary"><em>Last updated: {{ . | time.Format "2 January 2006" }}</em></small></p>{{ end }}
+    {{ .Content }}
+  </div>
 </article>
 {{ end }}
