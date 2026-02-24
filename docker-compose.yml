@@ -1,0 +1,12 @@
+services:
+  hugo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    container_name: lucid-hugo-dev
+    ports:
+      - '1313:1313'
+    volumes:
+      - .:/src
+    command: hugo server --bind 0.0.0.0 --baseURL http://localhost:1313/ --disableFastRender
