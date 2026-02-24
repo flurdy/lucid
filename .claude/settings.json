@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bd --help)",
+      "Bash(bd graph:*)",
+      "Bash(bd info:*)",
+      "Bash(bd ready:*)",
+      "Bash(bd show:*)",
+      "Bash(docker search:*)",
+      "Bash(docker image ls)",
+      "Bash(gh repo view:*)"
+    ],
+    "deny": [
+      "Bash(git add -A)"
+    ],
+    "ask": [
+      "Bash(gh repo create:*)"
+    ]
+  }
+}
