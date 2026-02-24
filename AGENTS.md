@@ -6,7 +6,9 @@ Lucid is a Hugo static site hosting support pages (privacy, terms, support) for 
 
 ## Documentation
 
-- **[PLAN.md](PLAN.md)** - Project plan, decisions, and structure
+- **[docs/architecture.md](docs/architecture.md)** - Project structure, Hugo conventions, URL scheme
+- **[docs/deployment.md](docs/deployment.md)** - Cloudflare Pages build settings, verification
+- **[docs/adding-an-app.md](docs/adding-an-app.md)** - Step-by-step guide for adding a new app
 - **[docs/task-management.md](docs/task-management.md)** - Development workflow and issue tracking
 - **[docs/version-control.md](docs/version-control.md)** - Branching, staging, and commit conventions
 
@@ -39,37 +41,11 @@ docker compose up
 
 Site available at http://localhost:1313 with live reload.
 
-### Hugo Structure
-
-- `hugo.toml` - Site configuration
-- `content/` - Markdown pages organized by app (e.g., `content/tapin/`)
-- `layouts/` - HTML templates (`_default/baseof.html`, `single.html`, `list.html`)
-- `static/` - Static assets (images, etc.)
-
-### Hugo Front Matter
-
-Every content page needs:
-
-```yaml
----
-title: "Page Title"
-date: 2024-01-01
-lastmod: 2024-01-01
-description: "Brief description"
----
-```
-
-### Adding a New App
-
-1. Create `content/<appname>/` with `_index.md`, `privacy.md`, `terms.md`, `support.md`
-2. Hugo picks it up automatically
-
 ## Deployment
 
-- **Cloudflare Pages** — configured in dashboard, no wrangler.toml
-- Build command: `hugo`, output: `public`, env: `HUGO_VERSION`
-- Auto-deploys on push to `main` from `flurdy/lucid`
+- **Cloudflare Pages** — auto-deploys on push to `main`
 - **Do not push to main without user approval** — triggers production deploy
+- See [docs/deployment.md](docs/deployment.md) for build settings and verification
 
 ### Command Conventions
 

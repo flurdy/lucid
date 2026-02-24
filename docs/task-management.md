@@ -3,7 +3,7 @@
 How to manage tasks and issues, what steps to follow in development workflow for each task, and how to use Beads for issue tracking.
 
 - We use **Beads** for issue tracking.
-- [PLAN.md](../PLAN.md) for project plan and high-level decisions
+- [docs/architecture.md](architecture.md) for project structure and decisions
 
 ## Development Workflow
 
