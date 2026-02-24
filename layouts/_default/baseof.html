@@ -9,6 +9,7 @@
   <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
   <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/flatly/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <style>[data-bs-theme="dark"] .flurdy-logo { filter: invert(1); }</style>
   <script>var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);</script>
 </head>
 <body>
@@ -33,6 +34,7 @@
   </main>
   <footer class="container mt-5 py-3 border-top">
     <small class="text-body-secondary">&copy; {{ now.Year }} {{ .Site.Params.author }} · <a href="https://code.flurdy.com" class="text-body-secondary">code.flurdy.com</a></small>
+    <a href="https://flurdy.com" class="float-end"><img src="{{ "images/flurdy_warped_dual_bw.svg" | relURL }}" alt="flurdy.com" height="30" class="flurdy-logo"></a>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
