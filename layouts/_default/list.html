@@ -7,6 +7,9 @@
   </ul>
 </nav>
 {{ end }}
+{{ with .Params.icon }}
+<img src="{{ . }}" alt="{{ $.Title }} icon" style="width: 96px; height: 96px; border-radius: 20px;">
+{{ end }}
 <h1>{{ .Title }}</h1>
 {{ .Content }}
 <ul>

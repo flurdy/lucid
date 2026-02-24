@@ -1,9 +1,15 @@
 {{ define "main" }}
 <h1>{{ .Site.Title }}</h1>
 <p>{{ .Site.Params.description }}</p>
-<ul>
+<div class="grid">
   {{ range .Site.Sections }}
-  <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  <article>
+    {{ with .Params.icon }}
+    <a href="{{ $.RelPermalink }}"><img src="{{ . }}" alt="{{ $.Title }} icon" style="width: 64px; height: 64px; border-radius: 14px;"></a>
+    {{ end }}
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <p>{{ .Description }}</p>
+  </article>
   {{ end }}
-</ul>
+</div>
 {{ end }}
