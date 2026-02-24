@@ -6,6 +6,7 @@
   <title>{{ .Title }} — {{ .Site.Title }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <script>var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);</script>
 </head>
 <body>
   <header class="container">
@@ -17,6 +18,7 @@
         {{ range .Site.Sections }}
         <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
         {{ end }}
+        <li><a href="#" id="theme-toggle" role="button" class="outline contrast" style="padding: 0.25rem 0.5rem; font-size: 0.875rem;">Toggle theme</a></li>
       </ul>
     </nav>
   </header>
@@ -26,5 +28,20 @@
   <footer class="container">
     <small>&copy; {{ now.Year }} {{ .Site.Params.author }} · <a href="https://code.flurdy.com">code.flurdy.com</a></small>
   </footer>
+  <script>
+    (function() {
+      var root = document.documentElement;
+      document.getElementById('theme-toggle').addEventListener('click', function(e) {
+        e.preventDefault();
+        var current = root.getAttribute('data-theme');
+        var next;
+        if (current === 'dark') next = 'light';
+        else if (current === 'light') next = 'dark';
+        else next = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+      });
+    })();
+  </script>
 </body>
 </html>
