@@ -12,6 +12,10 @@ It is what runs on [code.flurdy.com](https://code.flurdy.com).
 
 Lucid was create when a requirement for some apps listed in code.flurdy.com needed have further information online, but they did not have a public website, which is often the case for mobile apps.
 
+## Live site
+
+[apps.flurdy.io](https://apps.flurdy.io)
+
 ## Run
 
 1. Fork project 

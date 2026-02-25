@@ -3,5 +3,8 @@ public/
 resources/
 .hugo_build.lock
 
+# IDE
+.vscode/
+
 # Beads issue tracking (synced via beads-sync branch)
 .beads/issues.jsonl
