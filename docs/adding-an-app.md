@@ -35,7 +35,7 @@ description: "Brief description"
   - Limitation of liability
   - Governing law
 - [ ] **Support page** includes:
-  - Contact email (apps@flurdy.com)
+  - Contact method
   - FAQ for common questions
 
 ## Verify Locally
