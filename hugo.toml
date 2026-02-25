@@ -1,7 +1,6 @@
 baseURL = 'https://apps.flurdy.io/'
 languageCode = 'en-gb'
-title = 'Flurdy Apps'
+title = 'Lucid: Apps by Flurdy'
 
 [params]
-  description = 'Support pages for Flurdy mobile apps'
   author = 'Flurdy'

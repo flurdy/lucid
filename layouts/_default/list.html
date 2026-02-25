@@ -14,9 +14,18 @@
   <h1 class="mb-0">{{ .Title }}</h1>
 </div>
 {{ .Content }}
+{{ with .Params.creator }}<p class="text-body-secondary"><strong>Creator:</strong> {{ if .url }}<a href="{{ .url }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}</p>{{ end }}
+{{ with .Params.license }}<p class="text-body-secondary"><strong>License:</strong> {{ . }}</p>{{ end }}
 <div class="list-group shadow-sm">
   {{ range .Pages }}
   <a href="{{ .RelPermalink }}" class="list-group-item list-group-item-action">{{ .Title }}</a>
+  {{ end }}
+  {{ range .Params.links }}
+  {{ if .coming_soon }}
+  <span class="list-group-item text-body-secondary">{{ .title }} <em>(coming soon)</em></span>
+  {{ else }}
+  <a href="{{ .url }}" class="list-group-item list-group-item-action" target="_blank" rel="noopener">{{ .title }} ↗</a>
+  {{ end }}
   {{ end }}
 </div>
 {{ end }}
