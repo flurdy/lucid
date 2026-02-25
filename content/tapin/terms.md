@@ -33,4 +33,4 @@ We may update these Terms from time to time. Continued use of the App after chan
 
 ## Contact Us
 
-If you have questions about these Terms, please contact us at [apps@flurdy.com](mailto:apps@flurdy.com).
+If you have questions about these Terms, please contact us via [ltrbx.io/flurdy.com](https://ltrbx.io/flurdy.com).

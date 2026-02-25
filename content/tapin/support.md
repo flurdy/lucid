@@ -11,7 +11,7 @@ If you have questions, feedback, or need support with TapIn, we're here to help.
 
 ## Contact Us
 
-- **Email**: [apps@flurdy.com](mailto:apps@flurdy.com)
+- **Contact form**: [ltrbx.io/flurdy.com](https://ltrbx.io/flurdy.com)
 
 We aim to respond within 48 hours.
 

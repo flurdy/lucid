@@ -44,4 +44,4 @@ We may update this Privacy Policy from time to time. Changes will be reflected o
 
 ## Contact Us
 
-If you have questions about this Privacy Policy, please contact us at [apps@flurdy.com](mailto:apps@flurdy.com).
+If you have questions about this Privacy Policy, please contact us via [ltrbx.io/flurdy.com](https://ltrbx.io/flurdy.com).
