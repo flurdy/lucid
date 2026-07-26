@@ -28,7 +28,11 @@ You are responsible for the information you enter, the security of your device, 
 
 ## Medical-Use Disclaimer
 
-PillTrack records information that you enter. It does not diagnose, prevent, treat, or cure any condition. It does not clinically monitor your health or detect medical problems.
+PillTrack records information that you enter. A dose status such as Taken, Skipped, or Missed is a user-recorded entry. PillTrack does not observe or verify physical ingestion, adherence, or safe use.
+
+If supply tracking is enabled, a Taken entry reduces PillTrack's estimated available quantity according to the recorded dose. This estimate is derived from the entry; it is not a measurement of medicine consumed or remaining.
+
+PillTrack does not diagnose, prevent, treat, or cure any condition. It does not clinically monitor your health or detect medical problems.
 
 PillTrack does not provide medical, pharmacy, dosing, or medication-interaction advice. It does not determine whether or when you should take, skip, start, stop, or change a medicine.
 
