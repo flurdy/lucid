@@ -74,3 +74,5 @@ We may update this Privacy Policy when PillTrack's behavior, dependencies, or le
 ## Contact
 
 For questions about this Privacy Policy or PillTrack's handling of information, use the [Flurdy contact form](https://ltrbx.io/flurdy.com).
+
+The hosted contact form is provided by Ltrbx. If you use it, the contact service receives the name, email address, and message you choose to submit. This is separate from PillTrack's local medicine store. Include only the information needed for your question and avoid unnecessary medicine or health details.

@@ -9,4 +9,4 @@ creator:
   url: "https://flurdy.com"
 ---
 
-PillTrack keeps medicine schedules, dose outcomes, reminders, and supply information on your device. Its privacy policy and terms are available below.
+PillTrack keeps medicine schedules, dose outcomes, reminders, and supply information on your device. Support, privacy, and terms are available below.
