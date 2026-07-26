@@ -7,7 +7,7 @@ description: "PillTrack Privacy Policy"
 
 ## Introduction
 
-This Privacy Policy explains how PillTrack ("the App") handles information. PillTrack is published under the Flurdy brand, with Ivar Abrahamsen as the accountable product owner.
+This Privacy Policy explains how PillTrack ("the App") handles information. PillTrack is published by Eray by Flurdy Ltd, with Ivar Abrahamsen as the accountable product owner.
 
 PillTrack helps one person record medicine schedules, dose outcomes, reminders, and supply information on their device. It does not provide medical advice.
 
