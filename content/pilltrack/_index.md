@@ -3,6 +3,7 @@ title: "PillTrack"
 date: 2026-07-26
 lastmod: 2026-07-26
 description: "Local-first medicine schedules, dose history, reminders, and supply tracking"
+icon: "/images/pilltrack-icon.png"
 license: "Proprietary"
 creator:
   name: "Flurdy"
