@@ -15,13 +15,13 @@ Before saying "done" or "complete", run this checklist:
 
 **Note:** Do NOT auto-push. Pushing main triggers Cloudflare Pages deploy - ask user first.
 
-**Note:** Daemon is auto-syncing beads changes to the beads-sync branch. No manual `bd sync` needed.
+**Note:** Beads data lives in embedded Dolt. Push issue changes with `bd dolt push` (ask first); pull with `bd dolt pull`.
 
 ## Core Rules
 - Track strategic work in beads (multi-session, dependencies, discovered work)
 - Use `bd create` for issues, TodoWrite for simple single-session execution
 - When in doubt, prefer bd—persistence you don't need beats lost context
-- Git workflow: daemon auto-syncs beads changes
+- Git workflow: `bd dolt push` / `bd dolt pull` sync issues to the beads-sync branch
 - Session management: check `bd ready` for available work
 
 ## Essential Commands
@@ -47,12 +47,13 @@ Before saying "done" or "complete", run this checklist:
 - `bd show <id>` - See what's blocking/blocked by this issue
 
 ### Sync & Collaboration
-- Daemon handles beads sync automatically (auto-commit + auto-push + auto-pull enabled)
-- `bd sync --status` - Check sync status
+- `bd dolt push` - Push issue changes to the beads-sync branch (ask first)
+- `bd dolt pull` - Pull issue changes from remote
+- `bd dolt status` - Check Dolt state
 
 ### Project Health
 - `bd stats` - Project statistics (open/closed/blocked counts)
-- `bd doctor` - Check for issues (sync problems, missing hooks)
+- `bd dolt status` - Check Dolt engine state
 
 ## Common Workflows
 

@@ -13,7 +13,7 @@ For all tasks, subtasks, bugs, and features, complete each phase in order. Do no
 
 1. Ensure you have a clean working directory: `git status` should show no uncommitted changes.
 2. If you have uncommitted changes, either commit them to git or create a new beads task for them before proceeding.
-3. Sync beads to get the latest tasks: `bd sync`
+3. Sync beads to get the latest tasks: `bd dolt pull`
 
 ### Phase 2: Find and Claim Work
 
@@ -44,4 +44,4 @@ For epics spanning multiple tasks, wrap the standard workflow:
 4. Create new beads tasks for any outstanding issues discovered.
 5. Check git status in case of unrelated uncommitted changes, commit or create beads tasks as needed.
 6. Close the epic: `bd close <epic-id>` if no uncommitted changes remain.
-7. Sync beads changes: `bd sync` if no uncommitted changes remain.
+7. Sync beads changes: `bd dolt push` if no uncommitted changes remain.
