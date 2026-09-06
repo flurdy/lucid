@@ -1,7 +1,7 @@
 ---
 title: "Privacy Policy"
 date: 2026-02-25
-lastmod: 2026-02-25
+lastmod: 2026-09-06
 description: "Expire Privacy Policy"
 ---
 
@@ -33,6 +33,7 @@ This data is not transmitted to any server and is not accessible to us.
 Expire uses the following third-party services:
 
 - **Expo/React Native** — the App is built using Expo and React Native. These frameworks may collect anonymous crash reports and diagnostics. See [Expo's privacy policy](https://expo.dev/privacy) for details.
+- **Open Food Facts** — when you scan a product barcode (Pro feature), the App sends the barcode number to [Open Food Facts](https://world.openfoodfacts.org) to look up the product name and category. Only the barcode is sent; no personal data or device identifiers. See [Open Food Facts' privacy policy](https://world.openfoodfacts.org/privacy) for details.
 
 ## Children's Privacy
 
